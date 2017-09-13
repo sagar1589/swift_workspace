@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,7 +39,6 @@
                                 <rect key="frame" x="259" y="185" width="75" height="65"/>
                                 <state key="normal" image="scissors"/>
                                 <connections>
-                                    <action selector="scissosClick" destination="BYZ-38-t0r" eventType="touchUpInside" id="UqC-JW-SNB"/>
                                     <segue destination="aB9-Ca-20s" kind="show" identifier="scissorSegue" id="2kW-XX-iLO"/>
                                 </connections>
                             </button>
@@ -56,7 +54,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="aB9-Ca-20s" kind="show" identifier="paperSegue" id="B2R-h6-f9H"/>
+                        <segue destination="aB9-Ca-20s" kind="show" identifier="paperSegue" id="O8r-qp-9Ar"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -84,8 +82,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTp-3U-9d5">
                                 <rect key="frame" x="152" y="587" width="71" height="30"/>
                                 <state key="normal" title="Play Again"/>
+                                <connections>
+                                    <action selector="playAgain" destination="aB9-Ca-20s" eventType="touchUpInside" id="SVq-8W-oG9"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yb3-Af-6NU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUZ-ct-sNn">
                                 <rect key="frame" x="166" y="192.5" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -97,19 +98,19 @@
                             <constraint firstItem="2cn-a5-E79" firstAttribute="centerX" secondItem="pyt-qD-Ufw" secondAttribute="centerX" id="2eb-B9-ppI"/>
                             <constraint firstItem="AyT-Sf-yV3" firstAttribute="top" secondItem="bTp-3U-9d5" secondAttribute="bottom" constant="50" id="2ns-Zc-vtL"/>
                             <constraint firstItem="bTp-3U-9d5" firstAttribute="centerX" secondItem="pyt-qD-Ufw" secondAttribute="centerX" id="Ayk-50-cMo"/>
-                            <constraint firstItem="Yb3-Af-6NU" firstAttribute="centerX" secondItem="pyt-qD-Ufw" secondAttribute="centerX" id="S1x-TZ-G5k"/>
-                            <constraint firstItem="Yb3-Af-6NU" firstAttribute="bottom" secondItem="2cn-a5-E79" secondAttribute="top" constant="-20" id="TEx-AK-XZE"/>
+                            <constraint firstItem="rUZ-ct-sNn" firstAttribute="centerX" secondItem="pyt-qD-Ufw" secondAttribute="centerX" id="Q4o-hw-q4L"/>
+                            <constraint firstItem="rUZ-ct-sNn" firstAttribute="bottom" secondItem="2cn-a5-E79" secondAttribute="top" constant="-20" id="Qop-FC-cEs"/>
                             <constraint firstItem="2cn-a5-E79" firstAttribute="centerY" secondItem="pyt-qD-Ufw" secondAttribute="centerY" id="vht-7S-42h"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="image" destination="2cn-a5-E79" id="w4w-aY-QPD"/>
-                        <outlet property="labelText" destination="Yb3-Af-6NU" id="3ym-Qz-JwY"/>
+                        <outlet property="resultImage" destination="2cn-a5-E79" id="bqo-8A-M4Y"/>
+                        <outlet property="resultLabel" destination="rUZ-ct-sNn" id="nlR-zb-YbW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Hi-h9-LDY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="929" y="36"/>
+            <point key="canvasLocation" x="928.79999999999995" y="35.532233883058474"/>
         </scene>
     </scenes>
     <resources>
@@ -118,6 +119,6 @@
         <image name="scissors" width="75" height="65"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2kW-XX-iLO"/>
+        <segue reference="O8r-qp-9Ar"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,12 +10,14 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
-    @IBOutlet var image:UIImageView!
+    var text:String!
+    @IBOutlet weak var resultImage: UIImageView!
     
-    @IBOutlet weak var labelText: UILabel!
+    @IBOutlet weak var resultLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        resultLabel.text="scissor clicked"
         // Do any additional setup after loading the view.
     }
 
@@ -24,6 +26,14 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        resultLabel.text=text
+    }
+    
+    @IBAction func playAgain()
+    {
+        self.dismiss(animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
