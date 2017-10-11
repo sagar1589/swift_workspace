@@ -27,7 +27,9 @@ class ViewController: UIViewController {
         let image = UIImage(named: "PaperCoversRock")!
         //resultVC.image.image=image
         resultVC.text="Rock clicked"
-        self.present(resultVC, animated: true, completion: nil)
+        //self.present(resultVC, animated: true, completion: nil)
+        
+        self.navigationController?.pushViewController(resultVC, animated: true);
         
     }
 
@@ -38,16 +40,45 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        var resultVC : SecondViewController!
-        resultVC = segue.destination as! SecondViewController
         
-        if segue.identifier == "scissorSegue"
+        
+        if segue.destination is SecondViewController
         {
-            resultVC.text="scissor clicked"
+            var resultVC : SecondViewController!
+            resultVC = segue.destination as! SecondViewController
+            if segue.identifier == "scissorSegue"
+            {
+                resultVC.text="scissor clicked"
+            }
+            else
+            {
+                resultVC.text="paper clicked"
+            }
+            
         }else
         {
-            resultVC.text="paper clicked"
+            var resultVC : HistoryViewController!
+            resultVC = segue.destination as! HistoryViewController
+            if segue.identifier == "historySegue"
+            {
+                resultVC.history=[History]()
+                for _ in 1...5
+                {
+                    let historyItem = History(result: "item", name: "name")
+                    resultVC.history?.append(historyItem)
+                }
+                
+            }
         }
+        
+        
+        
+        
+    }
+    
+    @IBAction func showHistory()
+    {
+       performSegue(withIdentifier: "historySegue", sender: self)
     }
 
 }

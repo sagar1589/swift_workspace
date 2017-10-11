@@ -13,6 +13,7 @@
 		1B2686391F6948A70018DC59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B2686381F6948A70018DC59 /* Assets.xcassets */; };
 		1B26863C1F6948A70018DC59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B26863A1F6948A70018DC59 /* LaunchScreen.storyboard */; };
 		1B2686441F694D270018DC59 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2686431F694D270018DC59 /* SecondViewController.swift */; };
+		1BC364BB1F751E5E00A4C753 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC364BA1F751E5E00A4C753 /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1B26863B1F6948A70018DC59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B26863D1F6948A70018DC59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B2686431F694D270018DC59 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		1BC364BA1F751E5E00A4C753 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				1B26863A1F6948A70018DC59 /* LaunchScreen.storyboard */,
 				1B26863D1F6948A70018DC59 /* Info.plist */,
 				1B2686431F694D270018DC59 /* SecondViewController.swift */,
+				1BC364BA1F751E5E00A4C753 /* HistoryViewController.swift */,
 			);
 			path = Roshambo;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 				1B2686441F694D270018DC59 /* SecondViewController.swift in Sources */,
 				1B2686341F6948A70018DC59 /* ViewController.swift in Sources */,
 				1B2686321F6948A70018DC59 /* AppDelegate.swift in Sources */,
+				1BC364BB1F751E5E00A4C753 /* HistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

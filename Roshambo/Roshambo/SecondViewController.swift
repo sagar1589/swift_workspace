@@ -32,7 +32,8 @@ class SecondViewController: UIViewController {
     
     @IBAction func playAgain()
     {
-        self.dismiss(animated: true, completion: nil)
+        //self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true);
     }
 
     /*

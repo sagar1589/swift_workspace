@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fc6-VX-Z5J">
-                                <rect key="frame" x="0.0" y="623" width="367" height="44"/>
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="41a-uy-lc7"/>
                                     <barButtonItem title="Pick" id="2QH-by-TxA">
@@ -31,7 +31,7 @@
                                             <action selector="chooseImage:" destination="BYZ-38-t0r" id="pjj-cI-6Rl"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem tag="1" title="Camera" id="uNF-tt-Ys1">
+                                    <barButtonItem tag="1" systemItem="camera" id="uNF-tt-Ys1">
                                         <connections>
                                             <action selector="chooseImage:" destination="BYZ-38-t0r" id="OuI-Hu-gT1"/>
                                         </connections>
@@ -55,15 +55,19 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pCz-44-V9l">
-                                <rect key="frame" x="0.0" y="20" width="367" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" red="0.1158725141" green="0.4373640258" blue="0.78368373690000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem id="iTQ-P7-sni">
-                                        <barButtonItem key="leftBarButtonItem" title="Share" id="b3u-uH-g4p">
+                                        <barButtonItem key="leftBarButtonItem" title="Share" style="done" id="b3u-uH-g4p">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="share" destination="BYZ-38-t0r" id="jmS-Ov-1wd"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="FUh-dV-QRA"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" style="done" id="FUh-dV-QRA">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -76,12 +80,12 @@
                             <constraint firstItem="5oH-26-svb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="GAe-Qg-cgR"/>
                             <constraint firstItem="pCz-44-V9l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Jrs-FT-Bgh"/>
                             <constraint firstItem="XUq-x0-fX2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="LSw-sX-GSh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="pCz-44-V9l" secondAttribute="trailingMargin" id="MXp-sa-pAC"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fc6-VX-Z5J" secondAttribute="trailingMargin" id="NWm-9e-1gt"/>
+                            <constraint firstAttribute="trailing" secondItem="pCz-44-V9l" secondAttribute="trailing" id="Nj8-Fa-cba"/>
                             <constraint firstItem="XUq-x0-fX2" firstAttribute="centerX" secondItem="Zws-ES-H36" secondAttribute="centerX" id="Ysf-U6-Yv1"/>
                             <constraint firstItem="Zws-ES-H36" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cuO-FT-4Xc"/>
                             <constraint firstItem="Zws-ES-H36" firstAttribute="top" secondItem="pCz-44-V9l" secondAttribute="bottom" id="hqY-MM-XrM"/>
                             <constraint firstItem="fc6-VX-Z5J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ktS-WX-S2f"/>
+                            <constraint firstAttribute="trailing" secondItem="fc6-VX-Z5J" secondAttribute="trailing" id="ktY-Ak-7co"/>
                             <constraint firstItem="XUq-x0-fX2" firstAttribute="top" secondItem="Zws-ES-H36" secondAttribute="top" constant="20" id="lQw-yI-s15"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Zws-ES-H36" secondAttribute="trailing" id="luh-xe-Y5s"/>
                             <constraint firstItem="Zws-ES-H36" firstAttribute="bottom" secondItem="fc6-VX-Z5J" secondAttribute="top" id="mqI-gb-Xn2"/>
